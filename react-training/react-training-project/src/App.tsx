@@ -1,24 +1,16 @@
 import './App.css'
 import { User } from './models/User'
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 function App () {
-  const init = [
-    {
-      id: 1,
-      name: 'Aref'
-    },
-    {
-      id: 2,
-      name: 'Ali'
-    },
-    {
-      id: 1,
-      name: 'Sami'
-    }
-  ]
+  const [users, setUsers] = useState<User[]>([])
 
-  const [users, setUsers] = useState<User[]>(init)
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => setUsers(users))
+  })
 
   const addUser = (): void => {
     setUsers([...users, { id: 1, name: 'whatever' }])
