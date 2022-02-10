@@ -8,7 +8,7 @@ export const Card = ({ cardInfo }) => {
         src={`https://robohash.org/${cardInfo.id}?set=set2&size=180x180`}
         alt='card img'
       />
-      <h1>{cardInfo.name}</h1>
+      <h2>{cardInfo.name}</h2>
       <p>{cardInfo.email}</p>
     </div>
   )
