@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Salon.Service/.vs/Salon.Service
+/Salon.Service/bin/Debug/net6.0
+/Salon.Service/obj
+/node_modules/
+/.cache
