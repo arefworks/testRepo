@@ -10,11 +10,18 @@ export class CustomMap {
     });
   }
 
-  addMarker(mark: IMarkerable, title: string = ''): void {
-    new google.maps.Marker({
+  addMarker(mark: IMarkerable): void {
+    const markerInfo = new google.maps.InfoWindow({
+      content: `<div>${mark.markerContent()}</div>`,
+    });
+
+    const marker = new google.maps.Marker({
       position: mark.location,
       map: this.map,
-      title: title,
+      title: mark.markerContent(),
+    });
+    marker.addListener('click', (event) => {
+      markerInfo.open(this.map, marker);
     });
   }
 }
