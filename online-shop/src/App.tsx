@@ -1,8 +1,9 @@
 import React from 'react'
+import HomePage from './pages/home/home-page'
 import './App.scss'
 
 function App () {
-  return <div>Hellow World</div>
+  return <HomePage></HomePage>
 }
 
 export default App
