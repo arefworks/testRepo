@@ -3,6 +3,7 @@
 import { Company } from './models/Company';
 import { User } from './models/User';
 import { CustomMap } from './models/CustomMap';
+import { helloWold } from 'aref-package';
 
 const user = new User();
 
@@ -18,3 +19,5 @@ map.addMarker(user);
 map.addMarker(company);
 
 console.log('working');
+
+helloWold();
