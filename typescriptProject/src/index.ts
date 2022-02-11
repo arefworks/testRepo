@@ -16,5 +16,5 @@ const map = new CustomMap('map');
 
 map.addMarker(user);
 map.addMarker(company);
-´
-console.log('working')
+
+console.log('working');
