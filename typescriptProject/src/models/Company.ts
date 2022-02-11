@@ -1,4 +1,4 @@
-import faker from 'faker';
+import * as faker from 'faker';
 import { IMarkerable } from './IMarkable';
 import { location } from './location';
 

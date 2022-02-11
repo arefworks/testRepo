@@ -1,4 +1,4 @@
-import faker from 'faker';
+import * as faker from 'faker';
 import { IMarkerable } from './IMarkable';
 import { location } from './location';
 
@@ -6,7 +6,7 @@ export class User {
   name: string;
   location: location;
   title: string;
-
+s
   markerContent(): string {
     return `
           <div>
