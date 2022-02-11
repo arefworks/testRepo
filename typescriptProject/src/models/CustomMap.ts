@@ -1,16 +1,20 @@
 import { location } from './location';
+import { IMarkerable } from './IMarkable';
 
 export class CustomMap {
   private map: google.maps.Map;
   constructor(DivId: string) {
-    new google.maps.Map(document.getElementById(DivId), {
+    this.map = new google.maps.Map(document.getElementById(DivId), {
       zoom: 1,
       center: { lat: 0, lng: 0 },
     });
   }
 
-  addMarker(location: location): void {
-    console.log('add marker');
-    console.log('location');
+  addMarker(mark: IMarkerable, title: string = ''): void {
+    new google.maps.Marker({
+      position: mark.location,
+      map: this.map,
+      title: title,
+    });
   }
 }

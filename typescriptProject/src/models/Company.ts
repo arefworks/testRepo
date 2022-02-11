@@ -1,7 +1,8 @@
 import faker from 'faker';
+import { IMarkerable } from './IMarkable';
 import { location } from './location';
 
-export class Company {
+export class Company  {
   name: string;
   catchPhrase: string;
   location: location;

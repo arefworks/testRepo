@@ -14,4 +14,5 @@ console.log(company);
 
 const map = new CustomMap('map');
 
-map.addMarker({ lat: 0, lng: 1 });
+map.addMarker(user);
+map.addMarker(company);
