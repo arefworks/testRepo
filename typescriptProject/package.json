@@ -8,6 +8,7 @@
     "aref-package": "file:../aref-package",
     "faker": "^4.0.0",
     "prop-types": "^15.8.0",
+    "smart-act-package": "github:arefworks/package-repo",
     "underscore": "^1.5.0"
   },
   "name": "typescriptproject",
