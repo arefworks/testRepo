@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.scss'
+import { Link } from 'react-router-dom'
 
 function Header () {
   return (
@@ -17,8 +18,12 @@ function Header () {
           </a>
         </div>
         <div className='nav-bar-right'>
-          <button className='nav-item'>Shop</button>
-          <button className='nav-item'>Sign in</button>
+          <Link to='/' className='nav-item'>
+            Shop
+          </Link>
+          <Link to='/login' className='nav-item'>
+            Sign in
+          </Link>
           <button className='nav-item'>
             CART <b>5</b>
           </button>

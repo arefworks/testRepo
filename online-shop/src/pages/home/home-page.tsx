@@ -3,7 +3,7 @@ import ShoppingList from '../../components/shopping-list/shopping-list'
 import './home-page.scss'
 import { Product } from '../../models/product'
 
-function HomePage () {
+function HomePage (props: any) {
   const products: Product[] = [
     { id: 1, name: 'hat', price: 55.3 },
     { id: 2, name: 'hat', price: 55.3 },
