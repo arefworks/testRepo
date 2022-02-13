@@ -1,6 +1,6 @@
 import './menu-item.scss'
 
-export default function MenuItem ({ item }) {
+export default function MenuItem (item: any) {
   return (
     <div className='menu-item'>
       <div

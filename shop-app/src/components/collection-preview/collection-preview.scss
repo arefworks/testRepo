@@ -1,0 +1,11 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
