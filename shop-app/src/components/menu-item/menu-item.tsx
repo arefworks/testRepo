@@ -1,6 +1,12 @@
 import './menu-item.scss'
+import { useNavigate } from 'react-router-dom'
 
-export default function MenuItem (item: any) {
+export default function MenuItem ({ item }: any) {
+  const navigate = useNavigate()
+  function handleItemClick (event) {
+    navigate('/shop')
+  }
+
   return (
     <div className='menu-item'>
       <div
@@ -8,7 +14,9 @@ export default function MenuItem (item: any) {
         style={{ backgroundImage: `url(${item.imgUrl})` }}
       ></div>
       <div className='title'>{item.name}</div>
-      <button className='shop-btm'>shop now</button>
+      <button className='shop-btm' onClick={handleItemClick}>
+        shop now
+      </button>
     </div>
   )
 }
