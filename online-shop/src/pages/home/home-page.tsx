@@ -1,22 +1,22 @@
 import React from 'react'
-import ShoppingList from '../../components/shopping-list/shopping-list'
 import './home-page.scss'
-import { Product } from '../../models/product'
+import { Category } from './../../models/Category'
+import { Menu } from '../../components/menu/menu'
 
-function HomePage (props: any) {
-  const products: Product[] = [
-    { id: 1, name: 'hat', price: 55.3 },
-    { id: 2, name: 'hat', price: 55.3 },
-    { id: 3, name: 'hat', price: 55.3 },
-    { id: 4, name: 'hat', price: 55.3 },
-    { id: 5, name: 'hat', price: 55.3 },
-    { id: 6, name: 'hat', price: 55.3 }
+function HomePage () {
+  const menuItems: Category[] = [
+    { id: 1, name: 'Hats', link: '/hats' },
+    { id: 2, name: 'Jackets', link: '' },
+    { id: 3, name: 'Jeans', link: '' },
+    { id: 4, name: 'Glasses', link: '' },
+    { id: 5, name: 'Sports', link: '' },
+    { id: 6, name: 'Shoes', link: '' }
   ]
 
   return (
     <div className='homepage'>
-      <h1>Welcome to my Homepage</h1>
-      <ShoppingList itemslist={products}></ShoppingList>
+      <h1>Welcome to my Smart Shop</h1>
+      <Menu items={menuItems}></Menu>
     </div>
   )
 }
